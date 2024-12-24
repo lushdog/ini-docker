@@ -1,0 +1,12 @@
+name: inichain
+
+services:
+  node:
+    image: trancelife/inichain:latest
+    restart: unless-stopped
+    cpuset: '${CPU_SET}'
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: 2048m
