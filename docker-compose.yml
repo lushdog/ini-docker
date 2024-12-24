@@ -5,6 +5,9 @@ services:
     image: ghcr.io/lushdog/inichain:latest
     restart: unless-stopped
     cpuset: '${CPU_SET}'
+    environment:
+      - ETH_ADRRDESS=${ETH_ADRRDESS}
+      - WORK_NAME=${WORK_NAME}
     logging:
       driver: "json-file"
       options:
