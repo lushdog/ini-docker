@@ -2,7 +2,7 @@ name: inichain
 
 services:
   node:
-    image: trancelife/inichain:latest
+    image: ghcr.io/lushdog/inichain:latest
     restart: unless-stopped
     cpuset: '${CPU_SET}'
     logging:
