@@ -5,6 +5,10 @@ services:
     image: ghcr.io/lushdog/inichain:latest
     restart: unless-stopped
     cpuset: '${CPU_SET}'
+    deploy:
+      resources:
+        limits:
+          cpus: '${CPU_LIMIT}'
     environment:
       - ETH_ADRRDESS=${ETH_ADRRDESS}
       - WORK_NAME=${WORK_NAME}
